@@ -1,0 +1,5 @@
+﻿<h2>Add Comment</h2>
+<% =simple_form_for[@article,@article.comments.build] do |form| %>
+<% =form.input :commenter %><br>
+<% =form.sumbit %>
+<%end%>
