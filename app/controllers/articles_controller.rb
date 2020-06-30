@@ -22,9 +22,11 @@
             end
         end
     end
+
     def edit
         @article = Article.find(params[:id])
     end
+
     def update
         @article = Article.find(params[:id])
         respond_to do |format|
@@ -35,14 +37,16 @@
             end
         end
     end
+
     def destroy
         @article = Article.find(params[:id])
         @article.destroy
         redirect_to @article
     end
+
     private 
     def article_params
-        params[:article].permit(:id, :title, :descripton)
+        params[:article].permit(:id, :title, :description)
     end
     
 end
